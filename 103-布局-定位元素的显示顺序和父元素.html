@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>103-布局-定位元素的显示顺序和父元素.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father1{
+			width: 300px;
+			height: 300px;
+			background: blue;
+		}
+		.son1{
+			width: 200px;
+			height: 200px;
+			background: gray;
+			position: relative;
+			left: 100px;
+			top: 100px;
+		}
+		.father2{
+			width: 300px;
+			height: 300px;
+			background: yellow;
+		}
+		.son2{
+			width: 200px;
+			height: 200px;
+			background: pink;
+			position: relative;
+			left: 100px;
+			bottom: 150px;
+		}
+		}
+	</style>
+</head>
+<body>
+	<div class="father1">
+		<div class="son1"></div>
+	</div>
+	<div class="father2">
+		<div class="son2"></div>
+	</div>
+</body>
+</html>

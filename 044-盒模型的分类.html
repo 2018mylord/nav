@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>044-盒模型的分类.html</title>
+	<style type="text/css">
+		/*div{
+			width: 200px;
+			height: 200px;
+			border: 10px solid red;
+			margin: 20px;
+			padding: 20px;
+		}*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			width: 200px;
+			height: 200px;
+			border: 10px solid red;
+			margin: 20px;
+			padding: 20px;
+			background: red;
+			box-sizing: content-box;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			border: 10px solid red;
+			margin: 20px;
+			padding: 20px;
+			background: red;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+</html>

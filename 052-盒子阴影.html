@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>052-盒子阴影.htnl</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 400px;
+			height: 400px;
+			border: 1px solid #000;
+			background: gray;
+			margin: 50px auto;
+			/*border-top-left-radius: 150px 150px;*/
+			/*border-top-left-radius: 150px;*/
+			/*border-top-left-radius: 50% 50%;*/
+			/*border-top-right-radius: 50% 50%;*/
+			box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.6);
+		}
+		/*.box{
+			box-shadow: 5px 5px 5px 1px;
+			border-radius: 50%;
+			border-radius: 20px;
+			border-radius: 50%;
+		}*/
+		.box{
+			box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.6) 
+		}
+	</style>
+</head>
+<body>
+	<div class="box">hello</div>
+</body>
+</html>

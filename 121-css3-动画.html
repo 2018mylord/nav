@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>121-css3-动画.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			width: 200px;
+			height: 200px;
+			margin-top: 20px;
+			background: red;
+			transition: width 2s;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			margin-top: 20px;
+			background: blue;
+			animation-name: sport;
+			animation-duration: 2s;
+		}
+		.box1:hover{
+			width: 600px;
+		}
+		@keyframes sport{
+			from{
+				width: 200px;
+			}
+			to{
+				width: 800px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+</html>

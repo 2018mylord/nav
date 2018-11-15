@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>070-布局-左右布局-浮动布局.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			border: 1px solid #000;
+			width: 600px;
+			height: 600px;
+		}
+		.son1{
+			width: 100px;
+			height: 100px;
+			background: red;
+			display: inline-block;
+
+		}
+		.son2{
+			width: 100px;
+			height: 100px;
+			background: blue;
+			display: inline-block;
+			float:right;
+			/*margin-left: 400px;*/
+		}
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+	<div class="son1"></div><div class="son2"></div>
+	</div>
+</body>
+</html>

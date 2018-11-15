@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>122-css3-动画的其它属性.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			width: 200px;
+			height: 200px;
+			margin-bottom: 20px;
+			background: blue;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background: red;
+			animation-name: sport;
+			animation-duration: 2s;
+			animation-delay: 200ms;
+			animation-iteration-count: 2;
+			animation-timing-function: linear;
+		}
+		@keyframes sport{
+			from{
+				width: 200px;
+			}
+			to{
+				width: 600px;
+			}
+		}
+		.box2:hover{
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+</html>

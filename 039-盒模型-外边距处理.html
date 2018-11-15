@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>039-盒模型-外边距处理.html</title>
+	<style type="text/css">
+		.father{
+			
+			border: 1px solid #000;
+			
+		}
+		.father div{
+			width: 100px;
+			height: 100px;
+			display:inline-block;
+			vertical-align:bottom;
+		}
+		.son1{
+			background: blue;
+		}
+		.son2{
+			background: grey;
+			margin:10px 20px 30px 40px;
+		}
+		.son3{
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="father"><div class="son1"></div><div class="son2"></div><div class="son3"></div>
+	</div>
+</body>
+</html>

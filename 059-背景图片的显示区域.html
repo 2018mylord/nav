@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>059-背景图片的显示区域.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+			width: 600px;
+			height: 2000px;
+			margin: 20px auto;
+			border: 1px dotted #000;
+			background-image: url(./1.jpg);
+			background-repeat: no-repeat;
+		}
+		li{
+			widows: 300px;
+			height: 300px;
+			border: 30px dotted #000;
+			background-origin: padding-box;
+			background-image: url(./1.jpg);
+			background-repeat: no-repeat;
+		}
+		li:nth-child(2){
+			background-image: url(./1.jpg);
+			background-origin: border-box;
+			}
+		li:nth-child(3){
+			background-origin: padding-box;
+			background-image: url(./1.jpg);
+		}
+		li:nth-child(4){
+			background-origin:content-box;
+			background-image: url(./1.jpg);
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

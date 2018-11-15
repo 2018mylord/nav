@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>104-布局-综合练习.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		.container{
+			width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		header{
+			position: fixed;
+			left: 50%;
+			width: 800px;
+			/*height: 50px;*/
+			top: 40px;
+			margin-left: -400px;
+			background: gray;
+			z-index: 999;
+		}
+		header ul li{
+			float: left;
+			width: 160px;
+			height: 50px;
+			line-height: 50PX;
+			text-align: center;
+		}
+		header ul li:nth-child(3){
+			background-color:red;
+		}
+		header ul li:nth-child(3) img{
+			/*position: relative;
+			top: -30px;
+			left: -16px;*/
+			position: absolute;
+			left: 383px;
+			top: -13px;
+		}
+		.carousel{
+			height: 400px;
+			margin-top: 120px;
+			position: relative;
+		}
+		.carousel img{
+			width: 100%;
+			height: 100%;
+		}
+		.carousel .arrow{
+			position: absolute;
+			top: 50%;
+			margin-top: -40px;
+			width: 40px;
+			height: 80px;
+			line-height: 80px;
+			background-color: rgba(0,0,0,0.6);
+			font-size: 30px;
+			color: #fff;
+			text-align: center;
+			cursor: pointer;
+		}
+		.carousel .arrow:hover{
+			background-color: rgba(0,0,0,0.9);
+		}
+		.carousel .left-arrow{
+			left: 0;
+		}
+		.carousel .right-arrow{
+			right: 0;
+		}
+		.carousel .btns{
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			width: 200px;
+			height: 30px;
+		}
+		.carousel .btns li{
+			float: left;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			margin-right: 10px;
+			text-align: center;
+			color: #fff;
+			background: #999;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		.content{
+			height: 2000px;
+			background: gray;
+			margin-top: 20px;
+		}
+		.ad{
+			position: fixed;
+			top: 50%;
+			margin-top: -50px;
+			width: 60px;
+			height: 100px;
+			background: red;
+		}
+		.left-ad{
+			left: 0;
+		}
+		.right-ad{
+			right: 0;
+			}
+		.back-top{
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			height: 100px;
+			width: 100px;
+			line-height: 100px;
+			font-size: 20px;
+			color: #fff;
+			text-align: center;
+			text-decoration: none;
+			background: #999;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<ul>
+			<li>导航1</li>
+			<li>导航2</li>
+			<li>
+				导航3<img src="../img/4.jpg">
+			</li>
+			<li>导航4</li>
+			<li>导航5</li>
+		</ul>
+	</header>
+	<section class="carousel container">
+		<img src="../img/5.png">
+		<span class="arrow left-arrow">&lt;</span>
+		<span class="arrow right-arrow">&gt;</span>
+		<ul class="btns">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</section>
+	<section class="content container"></section>
+	<div class="ad left-ad"></div>
+	<div class="ad right-ad"></div>
+	<a class="back-top" href="#">返回顶部</a>
+</body>
+</body>
+</html>

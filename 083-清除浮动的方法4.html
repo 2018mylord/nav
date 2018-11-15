@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>083-清除浮动的方法4.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			background: red;
+			/*margin-bottom: 20px;*/
+		}
+		.box2{
+			background: yellow;
+			margin-top: 20px;
+		}
+		.box1 p{
+			background: pink;
+			float: left;
+			width: 100px;
+		}
+		.box2 p{
+			background: blue;
+			float: left;
+			width: 100px;
+		}
+		.wall{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<p>p1</p>
+		<p>p1</p>
+		<p>p1</p>
+		<div class="wall"></div>
+	</div>
+	<div class="box2">
+		<p>p1</p>
+		<p>p1</p>
+		<p>p1</p>
+	</div>
+</body>
+</html>
