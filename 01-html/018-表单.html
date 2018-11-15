@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>018-表单.html</title>
+</head>
+<body>
+	<form action="https://www.kuazhu.com" method="get">
+		<h1>用户注册</h1>
+		<label for="username">
+		用户名：
+		</label>
+			<input type="text"  name="username" value="tom" id="username" >
+		</p>
+		<p>
+			<label for="password">密码</label>
+			<input type="password" id="password">
+		</p>
+		<p>
+			<label for="username">
+				性别
+			</label>
+			<input type="radio" value="male" name="sex">男
+			<input type="radio" value="female" name="sex">女
+			<input type="radio" value="none" name="sex" checked="checked">保密
+		</p>
+		<p>
+			爱好：
+			<input type="checkbox" name="hobby" value="basketball">篮球
+			<input type="checkbox" name="hobby" value="football">足球
+			<input type="checkbox" name="hobby" value="washfoot">洗脚
+		</p>
+			图片：
+			<input type="image" src="../实验表格/7.jpg" width="600px" height="500px" title="鲤鱼培训机构" alt="请正确编辑">
+			<p>
+				头像：
+				<input type="file" name="img">
+			</p>
+		<p>邮箱：
+			<input type="email" name="email">
+		</p>
+		<p>
+			<input type="hidden" value="我是偷偷来的" name="sec">
+			<input type="buttom" name="按钮">
+			<input type="submit" name="提交">
+			<input type="reset" name="重置">
+		</p>
+		<p>
+			年龄：
+			<input type="number" name="age">
+		</p>
+		<p>
+			日期：
+			<input type="date" name="day">
+		</p>
+		<p>
+			喜欢的颜色：
+			<input type="color" name="color">
+		</p>
+		<p>
+			<select name="city">
+				<optgroup label="直辖市">
+					<option value="bj">北京</option>
+					<option value="cq">重庆</option>
+				</optgroup>
+				<optgroup label="省会">
+					<option value="hz">杭州</option>
+					<option value="nj">南京</option>
+				</optgroup>
+			</select>
+			<p>
+				自我介绍:
+				<textarea name="intro" cols="30" rows="10"></textarea>
+			</p>
+		</p>
+		<p>
+			<input type="submit" value="提交">
+			<input type="reset" value"cz" name="重置">
+		</p>
+	</form>
+</body>
+</html>
