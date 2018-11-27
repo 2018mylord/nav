@@ -1,4 +1,4 @@
-
+window.onload=function{
 function toChange(){
 	var oBox=document.getElementById('box')
 	oBox.style.width='200px';
@@ -7,4 +7,6 @@ function toChange(){
 }
 
 var oBox=document.getElementById('box')
+// oBox.onclick="toChange()";
 oBox.onclick=toChange;
+}
