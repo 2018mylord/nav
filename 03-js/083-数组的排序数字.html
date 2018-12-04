@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>083-数组的排序数字.html</title>
+	<script type="text/javascript">
+		var arr1=[3,8,10,20,2,11];
+		console.log('1:::',arr1);
+		var arr2=arr1.sort();
+		// console.log('1:::',arr1);
+		
+		var tmp;
+		for(var i=0;i<arr1.length;i++){
+			for(var j=i+1;j<arr1.length;j++){
+
+				if (arr1[i]>arr1[j]) {
+					tmp=arr1[i];
+					arr1[i]=arr1[j]
+					arr1[j]=tmp;
+					console.log(arr1)
+				}
+			}
+		}
+		console.log('1:::',arr2);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

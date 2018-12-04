@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>053-在座倒三角.html</title>
+	<style type="text/css">	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.space{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+	}
+	.star{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+	}
+	</style>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	for(var i=1;i<=5;i++){
+		for(var k=1;k<=5-i;k++){
+			document.write("<span calss='space'></span>")
+		}
+		for(var j=1;j<=i;j++){
+			document.write('*'+"<sapn class='star'></sapn>");
+		}
+		document.write("<br>")
+	}
+</script>
+</html>

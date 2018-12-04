@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>050-选项卡.html</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	#tab-list{
+		overflow: hidden;
+	}
+	#tab-list li{
+		float: left;
+		width: 100px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	#tab-container li{
+		width: 400px;
+		height: 600px;
+		line-height: 600px;
+		font-size: 80px;
+		border: 1px solid #000;
+		cursor: pointer;
+		display: none;
+		text-align: center;
+	}
+	.active{
+		color: #ff6700;
+		border-bottom: 2px solid #ff6700;
+	}
+</style>
+<body>
+	<ul id="tab-list">
+		<li class="active">热门</li>
+		<li>电视</li>
+		<li>电脑</li>
+		<li>家具</li>
+	</ul>
+	<ul id="tab-container">
+		<li style="display: block;">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var oBtn=document.querySelectorAll('#tab-list li');
+	var oContent=document.querySelectorAll('#tab-container li');
+	// console.log(oBtn)
+	for(var i=0;i<oBtn.length;i++){
+		oBtn[i].index=i;
+		oBtn[i].onclick=function(){
+			for(var j=0;j<oBtn.length;j++){
+				oBtn[j].className='';
+				oContent[j].style.display='none';
+			}
+			this.className='active';
+			oContent[this.index].style.display='block';
+		}
+	}
+</script>
+</html>

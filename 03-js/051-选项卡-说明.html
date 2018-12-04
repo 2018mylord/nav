@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>051-选项卡-说明.html</title>
+</head>
+<style type="text/css">	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	#tab-list{
+		overflow: hidden;
+	}
+	#tab-list li{
+		float: left;
+		width: 100px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+	}
+	#tab-container li{
+		width: 400px;
+		height: 600px;
+		line-height: 600px;
+		text-align: center;
+		font-size: 60px;
+		display: none;
+		border: 1px solid #000;
+	}
+	.active{
+		color: #ff6700;
+		border-bottom: 2px solid #ff6700;
+	}
+</style>
+<body>
+	<ul id="tab-list">
+		<li class="active">电视</li>
+		<li>电脑</li>
+		<li>家具</li>
+		<li>电器</li>
+
+	</ul>
+	<ul id="tab-container">
+		<li style="display: block;">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var oBtn=document.querySelectorAll('#tab-list li');
+	var oContent=document.querySelectorAll('#tab-container li');
+	for(var i=0;i<oBtn.length;i++){
+		oBtn[i].onclick=function(){
+			
+			this.className='active'
+		}
+	}
+
+</script>
+</html>

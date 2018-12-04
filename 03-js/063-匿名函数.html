@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>063-匿名函数.html</title>
+</head>
+<body>
+	<button id="btn">点我</button>
+</body>
+<script	>	
+		var oBtn=document.getElementById('btn');
+		// oBtn.onclick=function(){
+		// 	alert('aa')
+		// }
+
+		// oBtn.onclick=sayHi;
+		// function sayHi(){
+		// 	alert('hi')
+		// }
+		function sayHi(){
+			alert('hi')
+		}
+		sayHi();
+</script>
+<!-- <script	>	
+		function sum(){
+			var result=0;
+			for(var i=0;i<arguments.length;i++){
+				result=result+arguments[i];
+
+			}
+			return result;
+		}
+		sum(3,4,5,6,7);
+		console.log(result)
+</script> -->
+</html>

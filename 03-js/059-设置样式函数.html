@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>059-设置样式函数.html</title>
+</head>
+<style type="text/css">	
+	*{
+		margin: 0;
+		padding: 0;	
+	}
+	.box{
+		width: 100px;	
+		height: 100px;	
+		border: 1px solid #000;
+	}
+	.box1{
+		width: 100px;	
+		height: 100px;	
+		border: 1px solid #000;
+	}
+</style>
+<body>
+	<button id="btn1">变宽</button>
+	<button id="btn2">变高</button>
+	<button id="btn3">变色</button>
+
+		<div class="box"></div>
+		<div class="box1"></div>
+</body>
+<script>	
+	var oBtn1=document.getElementById('btn1')
+	var oBtn2=document.getElementById('btn2')
+	var oBtn3=document.getElementById('btn3')
+	var oBox=document.querySelector('.box');
+	var oBox1=document.querySelector('.box1')
+	function css(obj,attr,value){
+		obj.style[attr]=value;
+	}
+	oBtn1.onclick=function(){
+		css(oBox,'width','200px');
+		css(oBox1,'width','200px');
+	}
+	oBtn2.onclick=function(){
+		css(oBox,'height','200px');
+		css(oBox1,'height','200px');
+	}
+	oBtn3.onclick=function(){
+		css(oBox,'background','red');
+		css(oBox1,'background','red');
+	}
+</script>
+</html>

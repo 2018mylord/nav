@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>071-作用域的决定2.html</title>
+	<script type="text/javascript">
+		var a =1;
+		function fn1(){
+			console.log('fn1',a);
+		}
+		function fn2(){
+			console.log('fn2',a);
+			fn1();
+		}
+		// fn1();
+		fn2();
+		console.log(a);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
