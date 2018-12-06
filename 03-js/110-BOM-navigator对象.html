@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>110-BOM-navigator对象.html</title>
+</head>
+<body>
+	<input type="button" id="txt" value="获取">
+</body>
+	<script type="text/javascript">
+		console.log(window.location)
+
+
+		var oTxt=document.getElementById('txt');
+		// var oBtn=document.getElementById('')
+		oTxt.onclick=function(){
+			console.log(window.navigator.userAgent);
+		}
+	</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>114-延迟定时器的基本使用.html</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	// setTimeout('console.log(1)',2000);
+	// window.setTimeout('console.log(1)',2000);
+
+	// function show(){
+	// 	console.log('show something')
+	// }
+
+	// setTimeout(show,2000);
+	// setTimeout(function(){
+	// 	console.log('hhhhhh')
+	// },2000);
+
+	var times=setTimeout(function(){
+			console.log('hhhhhh')
+		},2000);
+
+	clearTimeout(times)
+
+	console.log(times)
+	// console.log(times)
+
+    setTimeout(times,2000);
+
+
+
+</script>
+</html>
