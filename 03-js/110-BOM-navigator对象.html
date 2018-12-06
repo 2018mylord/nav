@@ -8,13 +8,18 @@
 	<input type="button" id="txt" value="获取">
 </body>
 	<script type="text/javascript">
-		console.log(window.location)
+		console.log(window.location);
+		console.log(document.location);
+		console.log(document.location==window.location);
 
 
 		var oTxt=document.getElementById('txt');
 		// var oBtn=document.getElementById('')
 		oTxt.onclick=function(){
-			console.log(window.navigator.userAgent);
+			// console.log(window.navigator.userAgent);
+			// window.location.assign('https://www.baidu.com');
+			// window.location.href='https://www.baidu.com';
+			window.location='https://www.baidu.com';
 		}
 	</script>
 </html>

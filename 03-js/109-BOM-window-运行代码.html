@@ -14,7 +14,8 @@
 
 	oBtn.onclick=function(){
 		var val=oTxt.value;
-		window.open('about:blank');
+		var newWin=window.open('about:blank');
+		newWin.document.write(val)
 	}
 </script>
 </html>
