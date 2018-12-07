@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>124-倒计时案例.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: black;
+		}
+		#timer{
+			text-align: center;
+			/*width: 400px;*/
+			color: #fff;
+			font-size: 30px;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer">
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var oTimer=document.getElementById('timer');
+
+	var endDate=new Date('2018-12-7 19:30:30');
+	var endTimer=endDate.getTime();
+	var timer=0;
+	function to2Str(num){
+		return num<10 ? '0'+num:''+num;
+	}
+	function handleTimer(){
+		
+	allMinSeconds=endTimer-Date.now();
+	if (allMinSeconds<=0) {
+			allMinSeconds=0;
+			clearInterval(timer)
+		}
+	allSeconds=parseInt(allMinSeconds/1000);
+	var iHour=parseInt(allSeconds/3600);
+	var iMinute=parseInt((allSeconds/3600)%60);
+	var iSecond=(allSeconds%3600)%60;
+	oTimer.innerHTML='距离活动结束还有'+to2Str(iHour)+'时'+to2Str(iMinute)+'分'+to2Str(iSecond)+'秒';
+	}
+	timer=setInterval(handleTimer,500);
+	handleTimer();
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>124-倒计时案例.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: black;
+		}
+		#timer{
+			width: 500px;
+			color: #fff;
+			font-size: 30px;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer">
+		距离活动结束还有15时30分30秒
+	</div>
+</body>
+<script type="text/javascript">
+	var oTimer=document.getElementById('timer');
+	var endTimer=new Date();
+	oTimer.interHTML='距离活动结束还有15时30分30秒';
+
+	function to2Str(num){
+		return num<10 ? '0'+num:''num
+	}
+	var allMillseconds=endTimer-Date.now();
+	var allSeconds=parseInt(allMillseconds/1000);
+
+	var iHour=parseInt(allMillseconds/3600);
+	var iMinute=parseInt(allMillseconds%3600/60)
+</script>
+</html> -->
