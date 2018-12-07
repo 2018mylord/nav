@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>132-scroll相关值.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 3000px;
+			height: 3000px;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+console.log("scrollLeft",document.documentElement.scrollLeft);    //读写属性,表示隐藏在内容区域左侧的宽度,一般指水平滚动距离
+console.log("scrollTop" ,document.documentElement.scrollTop);   //读写属性,表示隐藏在内容区域上侧的高度,一般指垂直滚动距离
+console.log("scrollWidth",document.documentElement.scrollWidth);    //只读属性,表示元素内容的宽度,包括由于滚动而未显示在屏幕中内容
+console.log("scrollHeight",document.documentElement.scrollHeight);    //只读属性,表示元素内容的高度,包括由于滚动而未显示在屏幕中内容
+
+console.log("scrollLeft",document.body.scrollLeft); 
+console.log("scrollTop" ,document.body.scrollTop);
+console.log("scrollWidth",document.body.scrollWidth);
+console.log("scrollHeight",document.body.scrollHeight); 
+
+var l=document.documentElement.scrollLeft||document.body.scrollLeft;
+var t=document.documentElement.scrollTop||document.body.scrollTop;
+console.log(l,t)
+</script>
+</html>
