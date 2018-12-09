@@ -37,6 +37,7 @@
 	width: 20px;
 	height: 56px;
 	color: #a2a3a3;
+	margin-right: -198px;
 	/*background: green;*/
 }
 .top .user-info1 .user-info1-box a,
@@ -56,6 +57,7 @@
 	width: 20px;
 	height: 56px;
 	color: #a2a3a3;
+	margin-right: -162px;
 	/*background: purple;*/
 }
 .header{
@@ -189,7 +191,8 @@
 
 .main{
 	height: 5746px;
-	width: 1874px;
+	/*width: 1874px;*/
+	width: 1979px;
 	background: #ccc;
 }
 .main .container{
