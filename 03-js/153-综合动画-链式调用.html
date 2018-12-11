@@ -85,11 +85,7 @@
 			//如果终止当前的动画，清除定时器			
 			if(isStopCurrent){
 				clearInterval(obj.timer);
-				/*
-				if (typeof fnEnd=='function') {
-					fnEnd()
-				}
-				*/
+				//动画执行完毕后执行函数
 			typeof fnEnd=='function' &&fnEnd();
 				//如果终止当前的动画，运动
 			}else{
