@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>157-事件处理程序.html</title>
+</head>
+<body>
+	<button id="btn">执行</button>
+	<button id="btn1">移除事件</button>
+</body>
+<script type="text/javascript">
+	var oBtn=document.getElementById('btn');
+	var oBtn1=document.getElementById('btn1');
+
+	function show(){
+		alert('hhh');
+	}
+	function sayHi(){
+		alert('hehe');
+	}
+
+	oBtn.addEventListener('click',show,false);
+	oBtn1.addEventListener('click',sayHi,false);
+</script>
+</html>

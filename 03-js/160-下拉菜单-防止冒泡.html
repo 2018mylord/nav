@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>160-下拉菜单-防止冒泡.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#menu{
+			width: 100px;
+			height: 600px;
+			/*border: 1px solid #000;*/
+			display: none;
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">下拉菜单</button>
+	<div id="menu"></div>
+</body>
+<script type="text/javascript">
+	var oBtn=document.getElementById('btn');
+	var oMenu=document.getElementById('menu');
+
+	oBtn.addEventListener('click',function(ev){
+		oMenu.style.display='none';
+
+	},false);
+	// oBtn.stopPropagation()
+	document.addEventListener('click',function(ev){
+		oMenu.style.display='block';
+		ev.stopPropagation();
+	},false);
+</script>
+</html>

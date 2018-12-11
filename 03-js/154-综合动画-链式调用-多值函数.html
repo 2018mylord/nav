@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>152-综合动画-链式调用.html</title>
+	<title>153-综合动画-链式调用-多值函数.html</title>
 	<style>
 		*{
 			margin: 0;
@@ -17,14 +17,10 @@
 	</style>
 </head>
 <body>
-	<div id="div1">变宽</div>
-	<div id="div2">变高</div>
-	<div id="div3">变红</div>
+	<div id="div1">变色</div>
 </body>
 <script>
 	var oDiv1 = document.getElementById('div1');
-	var oDiv2 = document.getElementById('div2');
-	var oDiv3 = document.getElementById('div3');
 	/**
 	 * @param  {object} obj    [DOM节点对象]
 	 * @param  {string} attr   [属性名称]
@@ -32,11 +28,13 @@
 	 * @param  {boolean} isLinear [是否是匀速动画]
 
 	 */
-	function animate(obj,attr,target,isLinear,fnEnd){
+	function animate(obj,options,isLinear,fnEnd){
 		//默认是匀速动画
+		if (var attr in options) {
 		if (isLinear==undefined) {
 			isLinear=true;
 		}
+
 		//防止多次操作开启多个定时器
 		clearInterval(obj.timer);
 		//速度/步长
@@ -100,6 +98,7 @@
 				}				
 			}		
 		},30)
+		}
 	}
 	oDiv1.onmouseover = function(){
 		animate(oDiv1,'width',400,true,function(){
@@ -107,19 +106,6 @@
 				animate(oDiv1,'opacity',100,true);
 			});
 		});	
-	}
-	oDiv1.onmouseout = function(){
-		animate(oDiv1,'opacity',50,true,function(){
-			animate(oDiv1,'height',100,true,function(){
-				animate(oDiv1,'width',100,true);
-			});
-		});	
-	}
-	oDiv2.onmouseover = function(){
-		animate(oDiv2,'height',400,true);		
-	}	
-	oDiv3.onmouseover = function(){
-		animate(oDiv3,'opacity',100,true);
 	}
 </script>
 </html>
