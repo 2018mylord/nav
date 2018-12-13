@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>168-事件-带框的拖拽.html</title>
+	<style type="text/css">	
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 100px;
+			left: 100px;
+			background: red;
+		}
+		.border{
+			position: absolute;
+			border: 1px dashed #000;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox=document.getElementById('box');
+	var divX=0
+	var divY=0;
+	oBox.onmousedown=function(ev){
+		divX=ev.clientX-oBox.offsetLeft;
+		divY=ev.clientY-oBox.offsetTop;
+
+		var oBorder=document.createElement('div');
+		oBorder.style.width=oBox.offsetWidth+'px';
+		oBorder.style.height=oBox.offsetHeight+'px';
+		oBorder.style.position=oBox.position;
+		oBorder.style.left='100px';
+		oBorder.style.top='100px';
+		oBorder.className='border';
+
+		document.body.appendChild(oBorder);
+
+		
+		oBox.onmousemove=function(ev){
+			oBorder.style.left=ev.clientX-divX +'px';
+			oBorder.style.top=ev.clientY-divY+'px';
+			}
+		document.onmouseup=function(ev){
+			oBox.style.left=oBorder.style.left;
+			oBox.style.left=oBorder.style.top;
+			document.body.removeChild(oBorder);
+			document.onmousedown=null;
+			document.onmousemove=null;
+		}
+
+		
+	}
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>165-事件-限制在父容器的基础拖拽.html</title>
+	<style type="text/css">	
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#father{
+			position: relative;
+			width: 600px;
+			height: 600px;
+			background: #ccc;
+			margin:100px auto;
+		}
+		#box{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 100px;
+			left: 100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="father">
+	<div id="box"></div>
+	</div>
+</body>
+<script>
+	var oBox=document.getElementById('box');
+	var oFaher=document.getElementById('father')
+	var divX=0
+	var divY=0;
+	oBox.onmousedown=function(ev){
+		divX=ev.clientX-oBox.offsetLeft;
+		divY=ev.clientY-oBox.offsetTop;
+
+		document.onmousemove=function(ev){
+			var l=ev.clientX-divX;
+			var t=ev.clientY-divY;
+
+			if(l<0){
+				l=0
+			}else if(l>oFaher.innerWidth-oBox.offsetLeft){
+				l=window.oFaher-oBox.offsetLeft;
+			}
+			if(t<0){
+				t=0
+			}else if(t>oFaher.innerHeight-oBox.offsetTop){
+				t=oFaher.innerHeight-oBox.offsetTop;
+			}
+			oBox.style.left=l +'px';
+			oBox.style.top=t+'px';
+			}
+		document.onmouseup=function(ev){
+			document.onmousedown=null;
+			document.onmousemove=null;
+		}
+
+		
+	}
+</script>
+</html>

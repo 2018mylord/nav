@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>164-事件-限制在可视区的基础拖拽.html</title>
+	<style type="text/css">	
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 100px;
+			left: 100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var oBox=document.getElementById('box');
+	var divX=0;
+	var divY=0;
+	oBox.onmousedown=function(ev){
+		divX=ev.clientX-oBox.offsetLeft;
+		divY=ev.clientY-oBox.offsetTop;
+
+		document.onmousemove=function(ev){
+			var l=ev.clientX-divX;
+			var t=ev.clientY-divY;
+
+			if(l<0){
+				l=0
+			}else if(l>window.innerWidth-oBox.offsetLeft){
+				l=window.innerWidth-oBox.offsetLeft;
+			}
+			if(t<0){
+				t=0
+			}else if(t>window.innerHeight-oBox.offsetTop){
+				t=window.innerHeight-oBox.offsetTop;
+			}
+			oBox.style.left=l +'px';
+			oBox.style.top=t+'px';
+			}
+		document.onmouseup=function(ev){
+			document.onmousedown=null;
+			document.onmousemove=null;
+		}
+
+		
+	}
+</script>
+</html>
