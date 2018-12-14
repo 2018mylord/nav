@@ -2,62 +2,73 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>168-事件-带框的拖拽.html</title>
-	<style type="text/css">	
+	<title>168-自定义滚动条.html</title>
+	<style>
 		*{
 			margin: 0;
 			padding: 0;
 		}
-		#box{
+		#wrap{
+			width: 500px;
+			height: 30px;
+			background: #ccc;
+			position: relative;
+			margin: 100px auto;
+		}
+		#btn{
 			position: absolute;
+			width: 30px;
+			height: 30px;
+			top: 0px;
+			left: 0px;
+			background: red;
+
+		}
+		#box{
 			width: 100px;
 			height: 100px;
-			top: 100px;
-			left: 100px;
 			background: red;
-		}
-		.border{
-			position: absolute;
-			border: 1px dashed #000;
-			box-sizing: border-box;
+			opacity: 0;
 		}
 	</style>
 </head>
 <body>
+	<div id="wrap">
+	<div id="btn"></div>
+	</div>
 	<div id="box"></div>
 </body>
 <script>
+	var oBtn=document.getElementById('btn');
 	var oBox=document.getElementById('box');
-	var divX=0
-	var divY=0;
-	oBox.onmousedown=function(ev){
-		divX=ev.clientX-oBox.offsetLeft;
-		divY=ev.clientY-oBox.offsetTop;
-
-		var oBorder=document.createElement('div');
-		oBorder.style.width=oBox.offsetWidth+'px';
-		oBorder.style.height=oBox.offsetHeight+'px';
-		oBorder.style.position=oBox.position;
-		oBorder.style.left='100px';
-		oBorder.style.top='100px';
-		oBorder.className='border';
-
-		document.body.appendChild(oBorder);
-
-		
-		oBox.onmousemove=function(ev){
-			oBorder.style.left=ev.clientX-divX +'px';
-			oBorder.style.top=ev.clientY-divY+'px';
+	var oWrap=document.getElementById('wrap');
+	var disX=0;
+	var disY=0;
+	oBtn.onmousedown=function(ev){
+		disX=ev.clientX-oBtn.offsetLeft;
+		// disY=ev.clientY-oBtn.offsetTop;
+		// console.log(disX,disY);
+		document.onmousemove=function(ev){
+			var l=ev.clientX-disX;
+			if (l<0) {
+				l=0;
+			}else if(l>oWrap.offsetWidth-oBtn.offsetWidth){
+				l=oWrap.offsetWidth-oBtn.offsetWidth
 			}
-		document.onmouseup=function(ev){
-			oBox.style.left=oBorder.style.left;
-			oBox.style.left=oBorder.style.top;
-			document.body.removeChild(oBorder);
-			document.onmousedown=null;
-			document.onmousemove=null;
-		}
 
-		
+			var scale=l/(oWrap.offsetWidth-oBtn.offsetWidth);
+
+
+			oBtn.style.left=l + 'px';
+
+			oBox.style.width=100 + 500 * scale + 'px';
+			oBox.style.height=100 + 500 * scale + 'px';
+			oBox.style.opacity=scale;
+		}
+		document.onmouseup=function(){
+			document.onmousemove=null;
+			document.onmouseup=null;
+		}
 	}
 </script>
 </html>
