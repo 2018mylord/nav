@@ -3,13 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>174-ctrl+回车提交.html</title>
+	<style>	
+		*{
+			margin: 0;
+			padding: 0;	
+		}
+		.wrap{
+			width: 400px;	
+			margin: 100px auto;
+		}
+		li{
+			width: 100%;	
+			line-height: 40px;
+			height: 40px;	
+			list-style: none;
+			border-bottom: 1px dashed #ccc;
+		}
+	</style>
 </head>
 <body>
-	<div id="wrap">
+	<div class="wrap">
 		<input type="text" id="txt"></input>
 		<input type="button" id="btn" value="发布">
 		<ul id="list">
-			<li>xxx</li>
 		</ul>
 	</div>
 </body>
@@ -17,9 +33,11 @@
 	var oTxt=document.getElementById('txt');
 	var oBtn=document.getElementById('btn');
 	var oList=document.getElementById('list');
-
-	
-
+	oTxt.onkeydown=function(ev){
+		if (ev.keyCode==13 && ev.ctrlKey) {
+			oBtn.onclick();
+		}
+	}
 	oBtn.onclick=function(){
 		var oLi=document.createElement('li');
 		oLi.innerHTML=oTxt.value;

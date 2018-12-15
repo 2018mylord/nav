@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>176-愤怒的小鸟.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			position:absolute;
+			width: 600px;
+			top: 100px;
+			left: 10px;
+			height: 600px;
+			border: 1PX solid #000;
+		}
+		#bord{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 30px;
+			height: 60px;
+			margin-left: -30px;
+			background-image: url(images/bird.jpg);
+			background-repeat: no-repeat;
+			background-size: 60px 60px;
+
+
+		}
+		.topLine{
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 30PX;
+			background-color: green;
+
+		}
+		.BotLine{
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 30PX;
+			background-color: green;
+
+		}
+		.BotLine{
+			position: absolute;
+			top: 0;
+			left: 100%;
+			width: 30PX;
+			background-color: green;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="bird"></div>
+	</div>
+</body>
+<script>
+
+	function getRandom(min,max){
+			return Math.round(min +(max - min)*Math.random())
+		}
+
+	var oBird=document.getElementById('bird');
+	var oWrap=document.getElementById('wrap');
+	var moveBirdTimer=0,addLineTimer = 0;
+	var iSpeed=0;
+	var spaceHeight=200;
+	// clearInver(moveBirdTimer);
+	function addLine(){
+		var oTopLine=document.createElement('div');
+		var oBottomLine=document.getElementById('div');
+		oTopLine.className='topLine';
+		oBottomLine.className='BottomLine';
+		var h=getRandom(100,300);
+		oTopLine.style.height=h + 'px';
+		oBottomLine.style.height=oWrap.offsetHeight - 2 - h - spaceHeight +'px';
+		oWrap.appendChild(oTopLine);
+		oWrap.appendChild(oBottomLine);
+		
+	}
+	// addLine();
+	clearInterval(addLineTimer);
+	addLineTimer = setInterval(addLine,80);
+
+	clearInterval(moveBirdTimer);
+	moveBirdTimer=setInterval(function(){
+		console.log("move ")
+		iSpeed += 1;
+		var t=oBird.offsetTop + iSpeed;
+		if (t<0) {
+			t=0;
+			die();
+		}else if (t>oWrap.offsetHeight-oBird.offsetHeight) {
+			t=oWrap.offsetHeight -2 - oBird.offsetHeight
+			die();
+		}
+		oBird.style.top=oBird.offsetTop + iSpeed + 'px'
+	},30)
+
+	function die(){
+		clearInver(moveBirdTimer);
+		clearInver(addLineTimer)
+	}
+
+	document.onkeydown=function(){
+		iSpeed -=10;
+	}
+	
+</script>
+</html>

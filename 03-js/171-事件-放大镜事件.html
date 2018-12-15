@@ -8,36 +8,102 @@
 			margin: 0;
 			padding: 0;
 		}
-		#main{
+		#wrap{
+			position: absolute;
+			top: 100px;
+			left: 100px;
 			
 		}
-
+		#bigBox{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 450px;
+			height: 450px;
+			border: 1px solid #000;
+		}
+		#bigBox img{
+			width: 100%;
+			height: 100%;
+		}
+		#mask{
+			width: 200px;
+			height: 200px;
+			top: 0;
+			left: 0;
+			background-color: rgba(225,225.0,0.5);
+			display: mone;
+		}
+		#list{
+			position: absolute;
+			float: left;
+			top: 450px;
+			left: 0;
+			width: 450px;
+		}
+		#list img{
+			width: 100%;
+			height: 100%;
+		}
+		#list li{
+			float: left;
+			width: 54px;
+			height: 54px;
+			margin-right: 10px;
+			list-style: none;
+			opacity: 0.5;
+			cursor: pointer;
+		}
+		#list li .active{
+			opacity: 1;
+		}
+		#largeBox{
+			position: absolute;
+			left: 452px;
+			width: 60px;
+			height: 600px;
+			border: 1px solid #000;
+			overflow: hidden;
+			display: none;
+		}
+		#largeBox{
+			width: 800px;
+			height: 800px;
+		}
 	</style>
 </head>
 <body>
-	<div id="main">
-	<div id="bigbox"></div>
-	<ul id="list">
-		<li>
-			<img src="" alt="">
-		</li>
-		<li>
-			<img src="" alt="">
-		</li>
-		<li>
-			<img src="" alt="">
-		</li>
-	</ul>
-	<div id="largebox"></div>
+	<div id="wrap">
+		<div id="bigBox">
+			<img src="images/p-b-0001.jpg" alt="">
+			<span id="mask"></span>
+		</div>
+		<ul id="list">
+			<li class=active><img src="images/p-s-0001.jpg" alt=""></li>
+			<li><img src="images/p-s-0002.jpg" alt=""></li>
+			<li><img src="images/p-s-0003.jpg" alt=""></li>
+		</ul>
+		<div id="largebox">
+			<img src="images/p-l-0001.jpg" alt="">
+		</div>
 	</div>
 </body>
 <script type="text/javascript">
-	var oMain=document.getElementById('main');
-	var oBigbox=document.getElementById('bigbox');
-	var oList=document.getElementById('list');
-	var oLargebox=document.getElementById('largebox');
+	var asmallImg=document.querySelectorAll('#list li');
+	var oBigImg=document.querySelector('#bigBox img');
+	var oLargeImg=document.querySelector('#largebox img');
+	for(var i=0;i<asmallImg.length;i++){
+		asmallImg[i].index=i;
+		asmallImg[i].onmouseover=function(){
+			for(var j=0;j<asmallImg.length;j++){
+				
+			}
+			oBigImg.src="images/p-b-0001" + (this.index+1)+".jpg";
+			oLargeImg.src="images/p-b-0002" + (this.index+1)+".jpg";
+			this.className='active';
 	
-	
+		}
+	}
 
 </script>
 </html>
