@@ -5,32 +5,55 @@
 	<title>179-事件委托-删除元素.html</title>
 </head>
 <body>
+	<button id="btn">添加</button>
 	<ul id="ul1">
-		<li>li1<a href="javascript:;">删除</a></li>
-		<li>li2<a href="javascript:;">删除</a></li>
-		<li>li3<a href="javascript:;">删除</a></li>
-		<li>li4<a href="javascript:;">删除</a></li>
-		<li>li5<a href="javascript:;">删除</a></li>
-		<li>li6<a href="javascript:;">删除</a></li>
-		<li>li7<a href="javascript:;">删除</a></li>
-		<li>li8<a href="javascript:;">删除</a></li>
-		<li>li9<a href="javascript:;">删除</a></li>
-		<li>li10<a href="javascript:;">删除</a></li>
+		<li>li1<a href="javascript:;" class="del">删除</a></li>
+		<li>li2<a href="javascript:;" class="del">删除</a></li>
+		<li>li3<a href="javascript:;" class="del">删除</a></li>
+		<li>li4<a href="javascript:;" class="del">删除</a></li>
+		<li>li5<a href="javascript:;" class="del">删除</a></li>
+		<li>li6<a href="javascript:;" class="del">删除</a></li>
+		<li>li7<a href="javascript:;" class="del">删除</a></li>
+		<li>li8<a href="javascript:;" class="del">删除</a></li>
+		<li>li9<a href="javascript:;" class="del">删除</a></li>
+		<li>li10<a href="javascript:;" class="del">删除</a></li>
 	</ul>
 </body>
 <script type="text/javascript">
 	var oUl=document.getElementById('ul1');
+	var oBtn=document.getElementById('btn');
+	oBtn.addEventListener('click',function(){
+		var oLi=document.createElement('li');
+		oLi.innerHTML='new date';
 
-	var oA=document.getElementsByTagName('a');
+		var oA=document.createElement('a');
+		oA.innerHTML='删除';
+		oA.href="javascript:;";
+		oA.className='del';
 
-	// for(var i=0;i<oA.length;i++){
-	// 	oA[i].onclick=function(){
-	// 		oUl.removeChild(this.parentNode)
-	// 	}
-	// }
+		oLi.appendChild(oA);
+		// var oA=document.createElement('a');
+
+		oUl.appendChild(oLi);
+	},false)
+
+	/*
+	var oA=oUl.getElementsByTagName('a');
+
+	for(var i=0;i<oA.length;i++){
+		oA[i].onclick=function(){
+			oUl.removeChild(this.parentNode)
+		}
+	}
+	*/
 	oUl.addEventListener('click',function(ev){
-		console.log(ev.target);
-		if (ev.target.className=='del') {}
+		// console.log(ev.target.className);
+		if (ev.target.className=='del') {
+			oUl.removeChild(ev.target.parentNode);
+		}
+		
+		
+		
 	},false)
 </script>
 </html>
