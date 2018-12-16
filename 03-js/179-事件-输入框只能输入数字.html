@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>179-事件-输入框只能输入数字.html</title>
+</head>
+<body>输入银行卡号：
+	<input type="text" id="txt">
+</body>
+<script type="text/javascript">
+	var oTxt=document.getElementById('txt');
+	oTxt.onkeydown=function(ev){
+		console.log(ev.keyCode);
+		if ((ev.keyCode<96 || ev.keyCode>105) && (ev.keyCode<49 || ev.keyCode>57) && ev.keyCode !=37 && ev.keyCode!=39 && ev.keyCode !=8) {
+			return false
+		}else{
+			return true;
+		}
+	}
+</script>
+</html>
