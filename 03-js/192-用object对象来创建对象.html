@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>192-用object对象来创建对象.html</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	var obj=new Object();
+	obj.name= 'Tom';
+	obj.age = 18;
+	obj.sayHi=function(){
+		console.log(this.name + 'sayhello');
+	}
+	console.log(obj);
+	// sayHi();
+	obj.sayHi();
+</script>
+</html>
