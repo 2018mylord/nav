@@ -8,13 +8,23 @@
 	
 </body>
 <script type="text/javascript">
-	var person = {
+	var obj = {
 		name:"Tom",
+		//name:"leo",//属性无序唯一
 		age:18,
 		friends:['leo','Andy'],
 		sayHi:function(){
 			console.log('Hi,my name is' + this.name )
 		}
 	}
+	console.log(obj);
+	console.log(obj.name);
+	obj.name = 'leo';
+	console.log(obj.name);
+	console.log(obj);
+	obj.sex='male';
+	console.log(obj);
+	console.log(obj.friends);
+	obj.sayHi();
 </script>
 </html>

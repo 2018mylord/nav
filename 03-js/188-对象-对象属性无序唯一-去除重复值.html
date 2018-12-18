@@ -8,10 +8,21 @@
 	
 </body>
 <script type="text/javascript">
-	var arr=[11,22,33,44,33,77,22,88,]
+	var arr=[11,22,33,44,33,22,77,88,]
 
-	function ununiquery(attr){
-		
+	function uniqueArray(attr){
+		var result = [];
+		var obj={};//空对象
+		for(var i=0;i<arr.length;i++){
+			obj[arr[i]]='';
+		}
+		// console.log(obj);
+		for(var attr in obj){
+			result.push(attr)
+		}
+
+		return result;
 	}
+	console.log(uniqueArray(arr));
 </script>
 </html>
