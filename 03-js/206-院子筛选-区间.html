@@ -9,7 +9,7 @@
 </body>
 <script type="text/javascript">
 	var str="4sgvbdb534gvsxbv52xcf542bz3v43z4z5sd4gvb4abcde5zd";
-	var str="你好hello";
+	var str2="你好hello世界";
 	var reg1=/[a-z]/g;
 	var reg2=/a|b|c|d|e/;
 	var reg3=/[abcde]/g;
@@ -25,6 +25,11 @@
 	console.log(str.replace(reg5,'%'));
 	console.log(str.replace(reg6,'%'));
 	console.log(str.replace(reg7,'%'));
-	console.log(str.replace(reg8,'%').length);
+	console.log(str2.replace(reg8,'%'));
+	function getLength(str){
+		return str.replace(/[\u4e00-\ue9fa5]/,'aa').length;
+	}
+	console.log(getLength(str2))
+	// console.log(str.replace(reg8,'%').length);
 </script>
 </html>

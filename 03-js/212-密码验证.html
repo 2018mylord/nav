@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>210-年份检查.html</title>
+	<title>212-密码验证.html</title>
 </head>
 <body>
 	<input type="text" id="txt">
@@ -12,11 +12,9 @@
 	var oTxt=document.getElementById('txt');
 	var oBtn=document.getElementById('btn');
 	
-	
 	oBtn.onclick=function(){
-		//合法年份（公元1000年至公元2999年）;
-		var reg=/^[1|2]\d{3}$/;
-		//console.log(oTxt.value);
+		//密码（以字母开头，长度在6-12之间，只能包含字母、数字、下划线）
+		var reg=/^[a-z]\w{5,11}$/;
 		if (reg.test(oTxt.value)) {
 			alert('合法');
 		}else{

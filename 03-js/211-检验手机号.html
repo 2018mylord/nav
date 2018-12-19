@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>210-年份检查.html</title>
+	<title>211-检验手机号.html</title>
 </head>
 <body>
 	<input type="text" id="txt">
@@ -14,9 +14,8 @@
 	
 	
 	oBtn.onclick=function(){
-		//合法年份（公元1000年至公元2999年）;
-		var reg=/^[1|2]\d{3}$/;
-		//console.log(oTxt.value);
+		//1[3|5|8||7]\d{9}
+		var reg=/1[3|5|8||7]\d{9}$/;
 		if (reg.test(oTxt.value)) {
 			alert('合法');
 		}else{
