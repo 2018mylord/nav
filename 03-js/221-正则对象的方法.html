@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>221-正则对象exec的方法.html</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	var str='a2018-05-20b';
+	// var str='good baby,have a good day';
+	var reg=/\d{4}-\d{2}-\d{2}/;
+	console.log(str.replace(reg,'*'));
+	console.log(reg.lastIndex);
+	console.log(reg.exec(str));
+	// console.log(str.search(/good/));
+	console.log(reg.lastIndex);
+</script>
+</html>
