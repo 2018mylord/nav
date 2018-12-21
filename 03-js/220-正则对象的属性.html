@@ -8,9 +8,14 @@
 	
 </body>
 <script type="text/javascript">
-	var str='a1b2c3';
-	var reg=/[a-z]/g;
+	var str='abc abcdef';
+	var reg=/abcd/;
 
+	console.log(reg.lastIndex);
+	console.log(reg.source);
+	console.log(reg.lastIndex);
+	console.log(str.replace(reg,'*'));
+	/*
 	console.log(str);
 	console.log(reg.lastIndex);
 	console.log(reg.test(str));
@@ -20,6 +25,7 @@
 	console.log(reg.lastIndex);
 	console.log(reg.test('a1b2'));
 	console.log(reg.lastIndex);
+	*/
 
 </script>
 </html>

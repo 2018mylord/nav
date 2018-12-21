@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>226-表单属性.html</title>
+</head>
+<body>
+	<form id="form1" action="https://www.kuazhu.com">
+		<div>
+			用户名：<input type="text" name="username" value="tom">
+		</div>
+		<div>
+			密码：<input type="password" name="password">
+		</div>
+		<div>
+			性别：
+			<input type="radio" name="sex" value="male">男
+			<input type="radio" name="sex" value="female">女
+		</div>
+		<div>
+			爱好：
+			<input type="checkbox" name="hobby" value="basketball">篮球
+			<input type="checkbox" name="hobby" value="football">足球
+		</div>
+		<div>
+			城市：
+			<select name="city" id="city">
+				<option value="bj">北京</option>
+				<option value="sh">上海</option>
+			</select>
+			<div>
+				<input type="submit" value="提交">
+				<input type="button" value="测试" id="btn">
+			</div>
+		</div>
+	</form>
+	<form id="form2" action=""></form>
+</body>
+<script type="text/javascript">
+	var oBtn=document.getElementById('btn');
+	var oForm=document.forms[0];
+	// oForm.username.disabled=true;
+	// oForm.username.readOnly=true;
+	var oCheckbox=oForm.hobby;
+	oCheckbox[0].checked=true;
+
+	var oRadio=oForm.sex;
+	oRadio[0].checked=true;
+
+	var oSelect=oForm.city;
+
+	oBtn.onclick=function(){
+		/*
+		for(var i=0;i<oCheckbox.length;i++){
+			console.log(oCheckbox[i].checked)
+		}
+		
+		for(var i=0;i<oRadio.length;i++){
+			console.log(oRadio[i].checked)
+		}
+		*/
+		var result=[];
+		for(var i=0;oSelect.options.length;i++){
+			if (oSelect.options[i].selected) {
+				result.push(oSelect.options[i])
+			}
+		}
+		console.log(result)
+	}
+
+	/*
+	console.log(document.forms);
+	console.log(document.forms[0]);
+	console.log(document.forms[0].elements);
+	console.log(document.forms[0].elements[0]);
+	console.log(document.forms[0].elements['username']);
+	console.log(document.forms[0].elements.username);
+	console.log(document.forms[0].username);
+	console.log(document.forms[0].sex);
+	*/
+</script>
+</html>

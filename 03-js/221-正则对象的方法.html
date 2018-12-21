@@ -2,19 +2,28 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>221-正则对象exec的方法.html</title>
-</head>
+	<title>221-正则-正则test方法.html</title>
 <body>
 	
 </body>
 <script type="text/javascript">
-	var str='a2018-05-20b';
-	// var str='good baby,have a good day';
-	var reg=/\d{4}-\d{2}-\d{2}/;
+	var str='211212';//a1b2c3
+	var reg=/[a-z]/;
+	console.log(reg.lastIndex);
+	console.log(reg.test(str));
+	console.log(reg.lastIndex);
+	console.log(reg.test(str));
+	console.log(reg.lastIndex);
+	console.log(reg.test(str));
+	console.log(reg.lastIndex);
+	console.log(reg.test(str));
+	console.log(reg.lastIndex);
+	console.log(reg.test(str));
+	/*
 	console.log(str.replace(reg,'*'));
 	console.log(reg.lastIndex);
 	console.log(reg.exec(str));
-	// console.log(str.search(/good/));
 	console.log(reg.lastIndex);
+	*/
 </script>
 </html>
