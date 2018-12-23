@@ -149,7 +149,8 @@
             height: 40px;
             line-height: 40px;
             font-size: 12px;
-            color: #aaa;            
+            color: #aaa; 
+
         }
         #username-box .tiptext{
             float: left;  
@@ -282,22 +283,35 @@
     </div>
 </body>
 <script type="text/javascript">
-    //获取焦点
+    //1.获取元素
     var oForm=document.forms[0];
-    oForm.username.focus();
+    var oUsername=oForm.username;
+
 
     var aMsg=document.querySelectorAll('.msg');
-    var oCancle=document.querySelectorAll('.cancel')
+    var aCancel=document.querySelectorAll('.cancel');
 
+    //2.初始化
+    // var oCancle=document.querySelectorAll('.cancel')
+    oUsername.focus();
     aMsg[0].className = 'tiptext';
     aMsg[0].innerHTML='设置后不可更改<br>中英文均可，最长14个英文或7个汉字';
 
+    //3.处理显示隐藏取消按钮
+
     oUsername.oninput=function(){
-        if (oUsername.value.length>0) {
-            oUsername[0].
+        if (oUsername.value.length > 0) {
+           aCancel[0].style.display='block';
+        }else{
+        aCancel[0].style.display='none';
         }
     }
 
+    aCancel[0].onclick=function(){
+        oUsername.value='';
+        aCancel[0].style.display='none';
+        oUsername.focus();
+    }
 
 
 </script>

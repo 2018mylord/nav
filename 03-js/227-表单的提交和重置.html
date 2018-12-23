@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>226-表单属性.html</title>
+	<title>227-表单的提交和重置.html</title>
 </head>
 <body>
 	<form id="form1" action="https://www.kuazhu.com">
@@ -30,16 +30,33 @@
 			</select>
 			<div>
 				<input type="submit" value="提交">
-				<input type="button" value="测试" id="btn">
+				<input type="image" src="images/9.png"value="提交">
+				<button type="submit">submit button按钮</button>
+				<input type="reset" value="重置">
+				<button type="reset">reset button按钮</button>
+				<input type="button" value="测试1" id="btn1">
+				<input type="button" value="测试2" id="btn2">
 			</div>
 		</div>
 	</form>
 	<form id="form2" action=""></form>
 </body>
 <script type="text/javascript">
-	var oBtn=document.getElementById('btn');
+	var oBtn1=document.getElementById('btn1');
+	var oBtn2=document.getElementById('btn2');
 	var oForm=document.forms[0];
-	oForm.username.focus();//设置焦点
-	oForm.username.blur();//移除焦点
+	oForm.onsubmit=function(){
+		return false
+		console.log('on submit...');
+	}
+	oBtn1.onclick=function(){
+		oForm.submit();
+	}
+	oForm.onreset=function(){
+		console.log('on reset...');
+	}
+	oBtn2.onclick=function(){
+		oForm.reset();
+	}
 </script>
 </html>
