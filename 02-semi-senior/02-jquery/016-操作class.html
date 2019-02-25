@@ -17,14 +17,33 @@
 	</style>
 </head>
 <body>
-	<div>我是div1</div>
-	<div>我是div2</div>
+	<button id="btn">切换</button>
+	<div class="box1 box2">我是div1</div>
+	<div class="box1 box2">我是div2</div>
 </body>
 <script src="js/jquery-1.12.4.js"></script>
 <script>
 	$(function(){
 		// console.log($('div').attr("class","box1 box2 box3"));
-		$("div").addClass("box1 box2 box3")
+		// $("div").addClass("box1 box2 box3");
+		// $("div").removeClass("box1 box2 box3");
+		var oBtn=document.getElementById('btn');
+		oBtn.onclick=function(){
+			$('div').toggleClass('box3')
+		}
 	})
 </script>
+	<script type="text/javascript" src="jq-chajian/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+			})
+		</script> 	
+
+		<script type="text/javascript" src="jq-chajian/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+			})
+		</script> 
 </html>

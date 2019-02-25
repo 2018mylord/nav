@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>047-jquery方法补充.html</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div class="div1">div1</div>
+	<div >div2</div>
+	<div >div3</div>
+</body>
+<script  src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		function fn(){
+			console.log(this);
+		}
+		var result=fn.blind({"name",Tom});
+		
+
+		
+	})
+</script>
+</html>
