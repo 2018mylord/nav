@@ -13,6 +13,7 @@
 			height: 300px;
 			border: 1px solid #000;
 			margin:100px auto;
+			position: relative;
 		}
 		.son{
 			width: 100px;
@@ -29,4 +30,22 @@
 		<div class="son"></div>
 	</div>
 </body>
+<script  src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		/*
+		console.log($('.son').offset().top);
+		console.log($('.son').offset({
+			top:150,
+			left:150
+
+		}));
+		*/
+		console.log($('.son').position());
+		console.log($('.son').position({
+			top:150,
+			left:150
+		}));
+	})
+</script>
 </html>

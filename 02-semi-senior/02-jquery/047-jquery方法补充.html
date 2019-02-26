@@ -4,12 +4,17 @@
 	<meta charset="UTF-8">
 	<title>047-jquery方法补充.html</title>
 	<style type="text/css">
-		
+		div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+			margin-top: 10px;
+		}
 	</style>
 </head>
 <body>
-	<div class="div1">div1</div>
-	<div >div2</div>
+	<div >div1</div>
+	<div class="div2">div2</div>
 	<div >div3</div>
 </body>
 <script  src="js/jquery-1.12.4.js"></script>
@@ -18,7 +23,12 @@
 		function fn(){
 			console.log(this);
 		}
-		var result=fn.blind({"name",Tom});
+		// fn();
+		// var fn1=$.proxy(fn,{name:'Tom'});
+		// var fn1=fn.bind({name:"Tom"})
+		// fn1()
+		console.log($('div').is('.div2'))
+		
 		
 
 		
