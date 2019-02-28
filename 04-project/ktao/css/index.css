@@ -1,0 +1,62 @@
+
+
+
+
+
+
+/*顶部导航开始*/
+	.nav-side{
+		height: 44px;
+		background:#f3f5f7;
+}
+	.nav-login{
+		color:#fea675a;
+	}
+	.nav-left li{
+		height: 44px;
+		line-height: 44px;
+		margin-right: 5px;
+	}
+	.dropdown-toggle{
+		display: block;
+		height: 44px;
+		line-height: 44px;
+	}
+	.dropdown-layer{
+		background:#fff;
+		padding: 0 5px;/*padding内边距-上右下左*/
+		border: 1px solid #fff;
+		border-top: none;
+	}
+/*顶部导航结束*/
+
+/*头部开始*/
+	.header{
+		height: 100px;
+		background: yellow;
+}
+/*头部结束*/
+
+/*焦点开始*/
+	.focus{
+		height: 500px;
+		background: pink;
+}		
+/*焦点结束*/
+
+/*今日热销开始*/
+	.todays{
+		height: 100px;
+		background: tomato;
+}
+/*今日热销结束*/
+
+	.floor{
+		height: 200px;
+		background: purple;
+}
+/*楼层开始*/
+	.floor{
+		
+}
+/*楼层结束*/
