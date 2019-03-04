@@ -54,13 +54,12 @@
 		display: block;
 	}
 	*/
-	.dropdown-active .dropdown-toggle{
+	.menu-active .dropdown-toggle{
 		background: #fff;
 		border-left: 1px solid #f3f5f7;
 		border-right: 1px solid #f3f5f7;
 	}
-	
-	.dropdown-active .dropdown-layer{
+	.menu-active .dropdown-layer{
 		display: block;
 	}
 /*顶部导航结束*/

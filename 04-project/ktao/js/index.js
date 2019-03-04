@@ -4,12 +4,17 @@
 
 
 
-;(function(){
+;(function($){
 	$('.dropdown')
 	.hover(function(){
-		$(this).addClass('dropdown-active')
+		// $(this).addClass('menu-active')
+		var $this = $(this);
+		var activeClass = $this.data('active')+'-active';
+		$this.addClass(activeClass)
 	},function(){
-		$(this).removeClass('dropdown-active')
+		var $this = $(this);
+		var activeClass = $this.data('active')+'-active';
+		$this.removeClass(activeClass)
 
 
 	})
