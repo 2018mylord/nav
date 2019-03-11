@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>022-弹性布局-容器属性-换行.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 1000px;
+			height: 600px;
+			border:1px solid #000;
+			margin:50px auto;
+			/*弹性布局属性*/
+			display: flex;
+			
+			/*justify-content: flex-start;*/
+			/*justify-content: flex-end;*/
+			/*justify-content: center;*/
+			/*justify-content: space-between;*/
+			justify-content: space-around;
+		}
+		.son{
+			height: 50px;
+		}
+		.son1{
+			width: 100px;
+			background: yellow;
+		}
+		.son2{
+			width: 200px;
+			background: blue;
+		}
+		.son3{
+			width: 400px;
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son son1">我是div1</div>
+		<div class="son son2">我是div2</div>
+		<div class="son son3">我是div3</div>
+	</div>
+</body>
+</html>
