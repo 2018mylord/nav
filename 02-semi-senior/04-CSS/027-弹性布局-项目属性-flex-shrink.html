@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>027-弹性布局-项目属性-flex-shrink.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 1000px;
+			height: 600px;
+			border:1px solid #000;
+			margin:50px auto;
+			/*弹性布局属性*/
+			display: flex;
+			
+			/*align-items:stretch;
+			align-content:stretch;*/
+
+			align-items:flex-start;
+			/*align-content:flex-start;*/
+		}
+		.son{
+			height: 50px;
+		}
+		.son1{
+			width: 400px;
+			background: yellow;
+			flex-shrink: 0;
+		}
+		.son2{
+			width: 600px;
+			background: blue;
+			flex-shrink: 1;
+		}
+		.son3{
+			width: 800px;
+			background: pink;
+			flex-shrink: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son son1">我是div1</div>
+		<div class="son son2">我是div2</div>
+		<div class="son son3">我是div3</div>
+	</div>
+</body>
+</html>
