@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>024-弹性布局-容器属性-垂直对齐方式.html</title>
+	<title>029-弹性布局-项目属性-align-self.html</title>
 	<style>
 		*{
 			margin: 0;
@@ -16,11 +16,10 @@
 			/*弹性布局属性*/
 			display: flex;
 			
-			/*flex-wrap: wrap;*/
-			/*align-items:flex-start;*/
-			/*align-content:stretch;*/
+			/*align-items:stretch;
+			align-content:stretch;*/
 
-			/*align-items:flex-start;*/
+			align-items:flex-start;
 			/*align-content:flex-start;*/
 		}
 		.son{
@@ -29,15 +28,17 @@
 		.son1{
 			width: 100px;
 			background: yellow;
+			order: 2;
 		}
 		.son2{
 			width: 200px;
 			background: blue;
-			align-self: center;
+			order: -1;
 		}
 		.son3{
-			width: 800px;
+			width: 400px;
 			background: pink;
+			order: 1;
 		}
 	</style>
 </head>

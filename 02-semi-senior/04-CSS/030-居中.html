@@ -13,17 +13,20 @@
 			width: 800px;
 			height: 600px;
 			border:1px solid #000;
-			direction: flex;
+			display: flex;
+			flex-direction: row;/*flex-direction 决定项目的排列方向*/
 
-
+			/*align-content: center;*/
+			justify-content: center;/*justify-content 决定项目的水平对齐方式*/
+			align-items: center;/*align-items/align-content 决定项目的垂直对齐方式*/
 		}
 		.son1,.son2{
 			width: 100px;
 			height: 100px;
 			background: red;
 			border: 1px solid #000;
-			align-content: center;
-			justify-content: center;
+			box-sizing: border-box;
+			
 		}
 	</style>
 </head>

@@ -11,17 +11,37 @@
 		}
 		body{
 			height: 100vh;
+			display: flex;
+			flex-direction:column;/*flex-direction 决定项目的排列方向*/
 		}
 		header{
-			height: 12vh;
-			background: yellow;
+			background: blue;
 		}
 		section{
-
+			background: white;
 		}
 		footer{
-			height: 12vh;
-			background: blue;
+			background: yellow;
+		}
+		header,footer{
+			flex:0 0 12vh;/*flex 是flex-grow,flex-shrink,flex-basis的简写,默认值为0 1 auto,后两个属性可选*/
+		}
+		nav{
+			background: pink;
+		}
+		aside{
+			background: tomato;
+		}
+		.main{
+			flex-grow: 1;
+		}
+		nav,aside{
+			flex:0 0 12vw;
+		}
+		section{
+			flex-grow: 1;
+			display: flex;
+			flex-direction: row;
 		}
 	</style>
 </head>
@@ -29,7 +49,7 @@
 	<header>header</header>
 	<section>
 		<nav>nav</nav>
-		<main>main</main>
+		<div class="main">main</div>
 		<aside>aside</aside>
 	</section>
 	<footer>footer</footer>
