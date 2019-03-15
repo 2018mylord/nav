@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>001-let变量.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	/*
+	var a =1;
+	var a =2;
+	console.log('var::',a);
+	*/
+	/*
+	let a = 1;
+	let a = 2;
+
+	console.log('let',a);
+	*/
+	/*
+	console.log(a);//声明的提升
+	var a = 1;
+	
+	console.log(b);// b is not defined
+	let b = 1;
+	*/
+	/*
+	if (true) {
+		var a = 1;
+		console.log('in var::',a);
+	}
+		console.log('out var::',a)
+
+	if (true) {//let 定义的是一个块级作用域，一个花括号就代表一个块，所以出了块就会报错
+		let b =1;// Uncaught ReferenceError: b is not defined
+		console.log('in let::',b);
+	}
+		console.log('out let::',b);
+		*/
+
+	function fn11(){
+		var b = 1;
+		function fn22(){
+			b = 2;
+			console.log('fn22 b = ',b);
+		}
+		console.log('2:::fn11 b =',b);
+		fn22();
+		console.log('2:::fn11 b =',b);
+
+	}
+	fn11();
+</script>
+</html>
