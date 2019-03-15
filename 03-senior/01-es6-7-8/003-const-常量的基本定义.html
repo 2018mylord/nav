@@ -32,6 +32,7 @@
 	const PI =3.1415926;
 	PI = 2222;
 	*/
+	/*
 	const CONFIG = {
 		username:'root',
 		password:'123'
@@ -39,5 +40,19 @@
 	CONFIG = {};//Uncaught TypeError: Assignment to constant variable.
 	CONFIG.username = 'tom';
 	console.log(CONFIG);
+	*/
+	/*
+	if (true) {
+		const PI = 3.1415926;
+		console.log(PI);
+	}
+	console.log(PI);//Uncaught ReferenceError: PI is not defined
+	*/
+	/*
+	console.log(PI);
+	var PI = 3.1415926;
+	*/
+	console.log(PI);
+	const PI =3.1415926;//003-const-常量的基本定义.html:55 Uncaught ReferenceError: PI is not defined
 </script>
 </html>
