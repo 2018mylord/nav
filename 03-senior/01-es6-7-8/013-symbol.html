@@ -33,10 +33,18 @@
 	}
 	obj[s2] = "Leo";
 	console.log(obj);
+	/*
 	console.log(Object.getOwnPropertyDescriptors(obj))
 	for (let key in obj){
 		console.log(key,obj[key]);
 	}
-	console.log("obj[s1]",obj[s1])
+	console.log("obj[s1]",obj[s1])；
+	*/
+	// console.log(Reflect,ownKeys(obj));
+
+	let keys = Reflect.ownKeys(obj);
+	for(let key of keys){
+		console.log(key,obj[key])
+	}
 </script>
 </html>
