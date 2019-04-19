@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>025-promise对象的方法.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	let p1 = new Promise((resolve,reject)=>{
+		resolve('ok');
+		return data
+	})
+	//then会返回一个新的promise
+	let p2 = p1.then(data=>{
+		console.log(data);
+	})
+
+	//新的promise的成功时执行函数的参数由上一个promise的return决定
+	p2.then(data=>{
+		console.log(data)
+	})
+	console.log(p1);
+	console.log(p2);//promise
+	console.log(p1 === p2)
+</script>
+</html>
